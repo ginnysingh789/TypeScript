@@ -1,19 +1,18 @@
-//Taking list of user
-interface User{
+interface UserName
+{
     name:string
     age:number
 }
-function LegalUser(users:User[])
-{
-    for(let i=0;i<users.length;i++)
-    {
-        if(users[i].age>18)
-        {
-            console.log(users[i].name)
-        }
-    }
+const sum=(user1:UserName,user2:UserName)=>{
+    return user1.age+user2.age
 }
-let usersList:User[]=[
-    {name:'ginny',age:32},{name:'Hazma',age:32},{name:'hajs',age:12}
-]
-LegalUser(usersList)
+let user1:UserName={
+    name:'Ginny',
+    age:12
+}
+let user2:UserName={
+    name:'Ginny',
+    age:12
+}
+const result:number=sum(user1,user2)
+console.log(result)
